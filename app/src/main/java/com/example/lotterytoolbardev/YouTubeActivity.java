@@ -1,10 +1,7 @@
 package com.example.lotterytoolbardev;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -15,8 +12,7 @@ import static com.example.lotterytoolbardev.MainActivity.YOUTUBEID;
 
 public class YouTubeActivity extends YouTubeBaseActivity {
 
-    // Google YouTube API key (to retrieve from https://console.developers.google.com/)
-    private final static String API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+
     private YouTubePlayerView youTubePlayerView;
 
     @Override
@@ -36,7 +32,8 @@ public class YouTubeActivity extends YouTubeBaseActivity {
     public void playVideo(final String videoId, YouTubePlayerView youTubePlayerView) {
 
         // Initialize YouTube Player View
-        youTubePlayerView.initialize(API_KEY,
+        // Google YouTube API key (to retrieve from https://console.developers.google.com/)
+        youTubePlayerView.initialize(APIKey.API_KEY,
                 new YouTubePlayer.OnInitializedListener() {
                     @Override
                     public void onInitializationSuccess(YouTubePlayer.Provider provider,
