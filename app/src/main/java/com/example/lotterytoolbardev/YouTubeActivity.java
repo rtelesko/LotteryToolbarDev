@@ -2,6 +2,7 @@ package com.example.lotterytoolbardev;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -44,6 +45,7 @@ public class YouTubeActivity extends YouTubeBaseActivity {
                     @Override
                     public void onInitializationFailure(YouTubePlayer.Provider provider,
                                                         YouTubeInitializationResult youTubeInitializationResult) {
+                        Log.d("YouTube", "Initialization of the player fails!");
 
                     }
                 });
