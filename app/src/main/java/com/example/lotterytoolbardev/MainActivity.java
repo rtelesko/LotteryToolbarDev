@@ -51,12 +51,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        String youTubeSongID = "--HCZzQHrDA";
+        String youTubeVideoID = "6G-Rg9huy90";
 
         switch (item.getItemId()) {
             case R.id.mnuVideo:
                 Intent myIntent = new Intent(MainActivity.this, YouTubeActivity.class);
-                myIntent.putExtra(YOUTUBEID, youTubeSongID);
+                myIntent.putExtra(YOUTUBEID, youTubeVideoID);
                 startActivity(myIntent);
                 break;
 
@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mnuQuit:
                 finish();
                 break;
-
         }
         return true;
     }
